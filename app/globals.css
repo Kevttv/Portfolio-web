@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #333333;
+}
+
+a {
+  @apply transition-colors duration-200;
+}
+
+section {
+  @apply transition-opacity duration-300 ease-in-out;
+}
+
+section:target {
+  @apply opacity-100;
+}
+
+section:not(:target) {
+  @apply opacity-80;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#6C5DD3] to-[#0A2540];
+}
+
+.hover-gradient {
+  @apply relative overflow-hidden transition-all duration-300 ease-in-out;
+}
+
+.hover-gradient::before {
+  content: '';
+  @apply absolute inset-0 bg-gradient-to-r from-[#6C5DD3] to-[#0A2540] opacity-0 transition-opacity duration-300 ease-in-out;
+}
+
+.hover-gradient:hover::before {
+  @apply opacity-20;
+}
+
+.icon-hover {
+  @apply transition-transform duration-300 ease-in-out;
+}
+
+.icon-hover:hover {
+  @apply transform scale-110;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
