@@ -15,7 +15,7 @@ export default function Home() {
         <h1 className="text-4xl font-bold mb-4 gradient-text">Kevttv</h1>
         <p className="text-xl mb-4 text-[#6C5DD3]">Desarrollador de Software</p>
         <p className="text-gray-300 max-w-2xl mx-auto">
-          Soy Kevin Virgen Tapasco, un tecnólogo en Análisis y Desarrollo de Software con 19 años. Me apasiona explorar la inteligencia artificial, las integraciones y desarrollar soluciones innovadoras, especialmente en plataformas educativas. Me gusta la música, los videojuegos y caminar al aire libre. Disfruto compartir tiempo con mi familia y amigos, y trabajo muy bien en equipo. Siempre busco oportunidades para aprender y crecer en el mundo de la programación.
+          Soy Kevin Virgen Tapasco, un tecnólogo en Análisis y Desarrollo de Software, tengo 19 años de edad. Me apasiona explorar la inteligencia artificial, las integraciones y desarrollar soluciones innovadoras, especialmente en plataformas educativas. Me gusta la música, los videojuegos y caminar al aire libre. Disfruto compartir tiempo con mi familia y amigos, y trabajo muy bien en equipo. Siempre busco oportunidades para aprender y crecer en el mundo de la programación.
         </p>
       </section>
 
