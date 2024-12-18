@@ -7,7 +7,7 @@ export default function Header() {
         <Link href="/" className="text-2xl font-bold gradient-text">
           Kevttv
         </Link>
-        <ul className="flex space-x-4">
+        <ul className="hidden md:flex space-x-4 ">
           <li><Link href="#sobre-mi" className="hover-gradient px-2 py-1 rounded">Sobre mí</Link></li>
           <li><Link href="#skills" className="hover-gradient px-2 py-1 rounded">Skills</Link></li>
           <li><Link href="#titulos" className="hover-gradient px-2 py-1 rounded">Títulos</Link></li>

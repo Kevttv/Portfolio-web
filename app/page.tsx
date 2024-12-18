@@ -15,10 +15,7 @@ export default function Home() {
         <h1 className="text-4xl font-bold mb-4 gradient-text">Kevttv</h1>
         <p className="text-xl mb-4 text-[#6C5DD3]">Desarrollador de Software</p>
         <p className="text-gray-300 max-w-2xl mx-auto">
-          Soy un desarrollador de software apasionado y con experiencia en diversas tecnologías. 
-          A mis 19 años, me encanta explorar nuevas formas de crear soluciones innovadoras. 
-          Cuando no estoy programando, disfruto escuchando música, jugando videojuegos, 
-          caminando al aire libre y haciendo nuevos amigos.
+          Soy Kevin Virgen Tapasco, un tecnólogo en Análisis y Desarrollo de Software con 19 años. Me apasiona explorar la inteligencia artificial, las integraciones y desarrollar soluciones innovadoras, especialmente en plataformas educativas. Me gusta la música, los videojuegos y caminar al aire libre. Disfruto compartir tiempo con mi familia y amigos, y trabajo muy bien en equipo. Siempre busco oportunidades para aprender y crecer en el mundo de la programación.
         </p>
       </section>
 
@@ -63,16 +60,17 @@ export default function Home() {
       <section id="titulos" className="text-center">
         <h2 className="text-3xl font-bold mb-8 gradient-text">Títulos y Certificaciones</h2>
         <ul className="space-y-4">
-          <li>Certificación en Desarrollo Web Full Stack</li>
-          <li>Curso avanzado de React y Next.js</li>
-          <li>Taller de Integración de APIs</li>
+          {/* <li>Certificación en Desarrollo Web Full Stack</li> */}
+          {/* <li>Curso avanzado de React y Next.js</li> */}
+          {/* <li>Taller de Integración de APIs</li> */}
+          <li>Tecnólogo en Análisis y Desarrollo de Software</li>
         </ul>
       </section>
 
       <section id="proyectos">
         <h2 className="text-3xl font-bold mb-8 text-center gradient-text">Proyectos</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-          <div className="bg-gradient-to-br from-[#0A2540] to-[#000000] p-6 rounded-lg shadow-lg hover-gradient">
+        <div className="flex justify-center">
+          {/* <div className="bg-gradient-to-br from-[#0A2540] to-[#000000] p-6 rounded-lg shadow-lg hover-gradient">
             <h3 className="text-xl font-semibold mb-2 text-[#6C5DD3]">Sistema de Gestión de Tareas</h3>
             <p className="text-gray-300 mb-4">Una aplicación web para gestionar tareas y proyectos de manera eficiente.</p>
             <p className="text-sm text-gray-400">Tecnologías: React, Laravel, MySQL</p>
@@ -81,13 +79,12 @@ export default function Home() {
             <h3 className="text-xl font-semibold mb-2 text-[#6C5DD3]">Plataforma de E-learning</h3>
             <p className="text-gray-300 mb-4">Una plataforma interactiva para cursos en línea con integración de video y evaluaciones.</p>
             <p className="text-sm text-gray-400">Tecnologías: Next.js, Node.js, MongoDB</p>
-          </div>
+          </div> */}
           <div className="bg-gradient-to-br from-[#0A2540] to-[#000000] p-6 rounded-lg shadow-lg hover-gradient border-2 border-dashed border-gray-600 flex items-center justify-center">
-            <p className="text-gray-400 text-center">Próximo proyecto emocionante</p>
+            <p className="text-gray-400 text-center">Próximo proyecto en proceso</p>
           </div>
         </div>
       </section>
     </div>
   )
 }
-
