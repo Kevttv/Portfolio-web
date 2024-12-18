@@ -1,10 +1,10 @@
 <h1 align="center">Hola 👋, mi nombre es Kevin Virgen Tapasco</h1>
 <h3 align="center">Soy alguien curioso, dedicado y en constante búsqueda de crecer tanto profesional como personalmente. Me encanta el trabajo en equipo y aportar soluciones eficientes a los desafíos tecnológicos.</h3>
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=kevttv" alt="kevttv" /></a> </p>
-
-<h3 align="left">Connect with me:</h3>
+<h3 align="left">Contactame en:</h3>
 <p align="left">
+<a href="https://fb.com/kevft vt" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="kevft vt" height="30" width="40" /></a>
+<a href="https://instagram.com/kevft_vt" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="kevft_vt" height="30" width="40" /></a>
 </p>
 
 <h3 align="left">Languages and Tools:</h3>
@@ -13,3 +13,4 @@
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=kevttv&show_icons=true&locale=en&layout=compact" alt="kevttv" /></p>
 
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=kevttv&show_icons=true&locale=en" alt="kevttv" /></p>
+
