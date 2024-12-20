@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { FaHtml5, FaCss3Alt, FaJs, FaPhp, FaLaravel, FaReact } from 'react-icons/fa'
 
 export default function Home() {
@@ -70,21 +71,22 @@ export default function Home() {
       <section id="proyectos">
         <h2 className="text-3xl font-bold mb-8 text-center gradient-text">Proyectos</h2>
         <div className="flex justify-center">
-          {/* <div className="bg-gradient-to-br from-[#0A2540] to-[#000000] p-6 rounded-lg shadow-lg hover-gradient">
-            <h3 className="text-xl font-semibold mb-2 text-[#6C5DD3]">Sistema de Gestión de Tareas</h3>
-            <p className="text-gray-300 mb-4">Una aplicación web para gestionar tareas y proyectos de manera eficiente.</p>
-            <p className="text-sm text-gray-400">Tecnologías: React, Laravel, MySQL</p>
+          <div className="bg-gradient-to-br from-[#0A2540] to-[#000000] p-6 rounded-lg shadow-lg hover-gradient max-w-sm">
+            <Link href="https://simply-export-app.vercel.app/" passHref legacyBehavior>
+              <a target="_blank" rel="noopener noreferrer">
+                <img src="/simply-export-app.png" alt="Simply Export App" className="rounded-t-lg mb-4" />
+              </a>
+            </Link>
+            <h3 className="text-xl font-semibold mb-2 text-[#6C5DD3]">Simply Export App</h3>
+            <p className="text-gray-300 mb-4">Una aplicación web para exportar datos de manera eficiente.</p>
+            <p className="text-sm text-gray-400">Tecnologías: HTML, CSS, JavaScript</p>
           </div>
-          <div className="bg-gradient-to-br from-[#0A2540] to-[#000000] p-6 rounded-lg shadow-lg hover-gradient">
-            <h3 className="text-xl font-semibold mb-2 text-[#6C5DD3]">Plataforma de E-learning</h3>
-            <p className="text-gray-300 mb-4">Una plataforma interactiva para cursos en línea con integración de video y evaluaciones.</p>
-            <p className="text-sm text-gray-400">Tecnologías: Next.js, Node.js, MongoDB</p>
-          </div> */}
-          <div className="bg-gradient-to-br from-[#0A2540] to-[#000000] p-6 rounded-lg shadow-lg hover-gradient border-2 border-dashed border-gray-600 flex items-center justify-center">
+          <div className="bg-gradient-to-br from-[#0A2540] to-[#000000] p-6 rounded-lg shadow-lg hover-gradient border-2 border-dashed border-gray-600 flex items-center justify-center max-w-sm">
             <p className="text-gray-400 text-center">Próximo proyecto en proceso</p>
           </div>
         </div>
       </section>
+
     </div>
   )
 }
