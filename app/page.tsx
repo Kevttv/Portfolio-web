@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import { FaHtml5, FaCss3Alt, FaJs, FaPhp, FaLaravel, FaReact } from 'react-icons/fa'
 
 export default function Home() {
@@ -42,6 +41,10 @@ export default function Home() {
           <div className="flex flex-col items-center">
             <FaLaravel className="w-16 h-16 text-[#6C5DD3] mb-2" />
             <span>Laravel</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <FaReact className="w-16 h-16 text-[#6C5DD3] mb-2" />
+            <span>React</span>
           </div>
           <div className="flex flex-col items-center">
             <FaReact className="w-16 h-16 text-[#6C5DD3] mb-2" />
