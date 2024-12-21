@@ -61,9 +61,6 @@ export default function Home() {
       <section id="titulos" className="text-center">
         <h2 className="text-3xl font-bold mb-8 gradient-text">Títulos y Certificaciones</h2>
         <ul className="space-y-4">
-          {/* <li>Certificación en Desarrollo Web Full Stack</li> */}
-          {/* <li>Curso avanzado de React y Next.js</li> */}
-          {/* <li>Taller de Integración de APIs</li> */}
           <li>Tecnólogo en Análisis y Desarrollo de Software</li>
         </ul>
       </section>
@@ -71,22 +68,22 @@ export default function Home() {
       <section id="proyectos">
         <h2 className="text-3xl font-bold mb-8 text-center gradient-text">Proyectos</h2>
         <div className="flex justify-center">
-          <div className="bg-gradient-to-br from-[#0A2540] to-[#000000] p-6 rounded-lg shadow-lg hover-gradient max-w-sm">
-            <Link href="https://simply-export-app.vercel.app/" passHref legacyBehavior>
-              <a target="_blank" rel="noopener noreferrer">
-                <img src="/simply-export-app.png" alt="Simply Export App" className="rounded-t-lg mb-4" />
-              </a>
-            </Link>
+          <div className="bg-gradient-to-br from-[#0A2540] to-[#000000] p-6 rounded-lg shadow-lg project-card max-w-sm">
+            <img src="/simply-export-app.png" alt="Simply Export App" className="rounded-t-lg mb-4" />
             <h3 className="text-xl font-semibold mb-2 text-[#6C5DD3]">Simply Export App</h3>
             <p className="text-gray-300 mb-4">Una aplicación web para exportar datos de manera eficiente.</p>
             <p className="text-sm text-gray-400">Tecnologías: HTML, CSS, JavaScript</p>
+            <div className="mt-4">
+              <a href="https://simply-export-app.vercel.app/" target='_blank' rel="noopener noreferrer" className="text-[#4B3F8C] py-2 rounded-lg hover:text-[#7a69da]">
+                Ver Proyecto
+              </a>
+            </div>
           </div>
-          <div className="bg-gradient-to-br from-[#0A2540] to-[#000000] p-6 rounded-lg shadow-lg hover-gradient border-2 border-dashed border-gray-600 flex items-center justify-center max-w-sm">
+          <div className="bg-gradient-to-br from-[#0A2540] to-[#000000] p-6 rounded-lg shadow-lg project-card border-2 border-dashed border-gray-600 flex items-center justify-center max-w-sm hover-gradient">
             <p className="text-gray-400 text-center">Próximo proyecto en proceso</p>
           </div>
         </div>
       </section>
-
     </div>
   )
 }
