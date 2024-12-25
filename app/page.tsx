@@ -46,10 +46,6 @@ export default function Home() {
             <FaReact className="w-16 h-16 text-[#6C5DD3] mb-2" />
             <span>React</span>
           </div>
-          <div className="flex flex-col items-center">
-            <FaReact className="w-16 h-16 text-[#6C5DD3] mb-2" />
-            <span>React</span>
-          </div>
         </div>
         <div className="mt-8">
           <h3 className="text-2xl font-semibold mb-4">Integraciones</h3>
