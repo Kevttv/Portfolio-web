@@ -97,7 +97,7 @@ export default function Home() {
       <section id="titulos" className="text-center p-10 rounded-2xl backdrop-blur-md bg-white/30 dark:bg-gray-800/30 shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
         <h2 className="text-3xl font-bold mb-8 gradient-text">Títulos y Certificaciones</h2>
         <ul className="space-y-4">
-          <li>Tecnólogo en Análisis y Desarrollo de Software</li>
+          <li className='text-gray-600 dark:text-white'>Tecnólogo en Análisis y Desarrollo de Software</li>
         </ul>
       </section>
 
