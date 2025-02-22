@@ -6,13 +6,13 @@ export default function Footer() {
       <footer className="text-center p-10 rounded-2xl backdrop-blur-md bg-white/30 dark:bg-gray-800/30 shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
         <div className="flex justify-center space-x-6">
           <a href="https://github.com/kevttv" target="_blank" rel="noopener noreferrer" className="dark:text-gray-400 text-gray-600 dark:hover:text-white icon-hover">
-            <FaGithub className="w-6 h-6" />
+            <FaGithub className="w-6 h-6" name='github'/>
           </a>
           <a href="https://www.linkedin.com/in/kevttv-dev" target="_blank" rel="noopener noreferrer" className="dark:text-gray-400 text-gray-600 dark:hover:text-white icon-hover">
-            <FaLinkedin className="w-6 h-6" />
+            <FaLinkedin className="w-6 h-6" name='linkedin'/>
           </a>
           <a href="mailto:kevttv29@gmail.com" className="dark:text-gray-400 text-gray-600 dark:hover:text-white icon-hover">
-            <FaEnvelope className="w-6 h-6" />
+            <FaEnvelope className="w-6 h-6" name='mail' />
           </a>
         </div>
         <p className="mt-4 text-center dark:text-gray-400 text-gray-600">© 2024 Kevttv. Todos los derechos reservados.</p>
