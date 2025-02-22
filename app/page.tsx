@@ -155,7 +155,16 @@ export default function Home() {
         <h2 className="text-3xl font-bold mb-8 text-center gradient-text">Proyectos</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="backdrop-blur-md bg-white/40 dark:bg-gray-800/40 p-6 rounded-lg shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
-            <img src="/simply-export-app.png" alt="Simply Export App" className="rounded-t-lg mb-4" />
+            <div className="relative aspect-[16/9] w-full mb-4">
+              <Image
+                src="/simply-export-app.png"
+                alt="Simply Export App"
+                fill
+                className="rounded-lg object-contain"
+                priority={false}
+                loading="lazy"
+              />
+            </div>
             <h3 className="text-xl font-semibold mb-2 text-[#6C5DD3]">Simply Export App</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-4">Una aplicación web para exportar datos de manera eficiente.</p>
             <p className="text-sm text-gray-500 dark:text-gray-400">Tecnologías: HTML, CSS, JavaScript</p>
