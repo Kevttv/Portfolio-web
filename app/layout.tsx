@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import { Analytics } from "@vercel/analytics/react"
+import Fondo from './components/Fondo'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,15 +20,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className={`${inter.className} bg-gradient-to-br from-[#000000] to-[#0A2540] text-gray-100 min-h-screen flex flex-col`}>
-        <Header />
-        <main className="flex-grow">
-          {children}
-          <Analytics />
-        </main>
-        <Footer />
+      <body className={inter.className}>
+        <Fondo>
+          <Header />
+          <main className="flex-grow">
+            {children}
+            <Analytics />
+          </main>
+          <Footer />
+        </Fondo>
       </body>
     </html>
   )
 }
-
