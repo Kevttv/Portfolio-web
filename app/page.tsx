@@ -74,8 +74,8 @@ export default function Home() {
       </section>
 
       <section id='integrations' className="text-center gradient-text p-10 rounded-2xl backdrop-blur-md bg-white/30 dark:bg-gray-800/30 shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
-      <h2 className="text-3xl font-bold mb-8 gradient-text">Integraciones</h2>
-      <div className="mt-8">
+        <h2 className="text-3xl font-bold mb-8 gradient-text">Integraciones</h2>
+        <div className="mt-8">
           <div className="grid grid-cols-3 gap-6">
             <div className="flex flex-col items-center">
               <SiZapier className="w-16 h-16 text-purple-900 dark:text-[#6C5DD3] mb-2" />
@@ -96,9 +96,58 @@ export default function Home() {
       {/* Education */}
       <section id="titulos" className="text-center p-10 rounded-2xl backdrop-blur-md bg-white/30 dark:bg-gray-800/30 shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
         <h2 className="text-3xl font-bold mb-8 gradient-text">Títulos y Certificaciones</h2>
-        <ul className="space-y-4">
-          <li className='text-gray-600 dark:text-white'>Tecnólogo en Análisis y Desarrollo de Software</li>
-        </ul>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="backdrop-blur-md bg-white/40 dark:bg-gray-800/40 p-6 rounded-lg shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
+            <div className="relative aspect-[16/9] w-full mb-4">
+              <Image
+                src="/certificado.png"
+                alt="Certificado Tecnólogo"
+                fill
+                className="rounded-lg object-contain"
+                priority={false}
+                loading="lazy"
+              />
+            </div>
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
+              Tecnólogo en Análisis y Desarrollo de Software
+            </p>
+            <div className="mt-4">
+              <a
+                href="https://drive.google.com/file/d/1ktGK2LzZKIluTG8J9LzySY5w63z_ikbQ/view?usp=drive_link"
+                target='_blank'
+                rel="noopener noreferrer"
+                className="text-[#6C5DD3] hover:text-[#7a69da] transition-colors duration-300"
+              >
+                Ver Certificado
+              </a>
+            </div>
+          </div>
+          <div className="backdrop-blur-md bg-white/40 dark:bg-gray-800/40 p-6 rounded-lg shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
+            <div className="relative aspect-[16/9] w-full mb-4">
+              <Image
+                src="/certificado-ingles.png"
+                alt="Certificado Ingles"
+                fill
+                className="rounded-lg object-contain"
+                priority={false}
+                loading="lazy"
+              />
+            </div>
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
+              Curso Inglés BBE Languages
+            </p>
+            <div className="mt-4">
+              <a
+                href="https://drive.google.com/file/d/1uSPB5ggRYbXWf97ytvD9IsVhA8i8n8o7/view?usp=drive_link"
+                target='_blank'
+                rel="noopener noreferrer"
+                className="text-[#6C5DD3] hover:text-[#7a69da] transition-colors duration-300"
+              >
+                Ver Certificado
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Projects */}
@@ -121,7 +170,6 @@ export default function Home() {
               </a>
             </div>
           </div>
-
           <div className="backdrop-blur-md bg-white/40 dark:bg-gray-800/40 p-6 rounded-lg shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-2 border-dashed border-gray-300 dark:border-gray-600 flex items-center justify-center">
             <p className="text-gray-600 dark:text-gray-400 text-center">Próximo proyecto en proceso</p>
           </div>
