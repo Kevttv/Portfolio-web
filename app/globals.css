@@ -27,7 +27,7 @@ section:not(:target) {
 }
 
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#6C5DD3] to-[#0A2540];
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#6C5DD3] to-[#2416e9];
 }
 
 .hover-gradient {
