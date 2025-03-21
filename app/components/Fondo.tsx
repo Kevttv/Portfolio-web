@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { Sun, Moon } from "lucide-react"
 import type React from "react"
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function BackgroundWrapper({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState("dark")
 
   useEffect(() => {
