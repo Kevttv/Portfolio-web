@@ -39,35 +39,35 @@ export default function Home() {
         <h2 className="text-3xl font-bold mb-8 gradient-text">Skills</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
           <div className="flex flex-col items-center">
-            <FaHtml5 className="w-16 h-16 text-purple-900 dark:text-[#6C5DD3] mb-2" />
+            <FaHtml5 className="w-16 h-16 text-[#E34F26] mb-2" />
             <span className='text-gray-600 dark:text-white'>HTML</span>
           </div>
           <div className="flex flex-col items-center">
-            <FaCss3Alt className="w-16 h-16 text-purple-900 dark:text-[#6C5DD3] mb-2" />
+            <FaCss3Alt className="w-16 h-16 text-[#1572B6] mb-2" />
             <span className='text-gray-600 dark:text-white'>CSS</span>
           </div>
           <div className="flex flex-col items-center">
-            <FaJs className="w-16 h-16 text-purple-900 dark:text-[#6C5DD3] mb-2" />
+            <FaJs className="w-16 h-16 text-[#F7DF1E] mb-2" />
             <span className='text-gray-600 dark:text-white'>JavaScript</span>
           </div>
           <div className="flex flex-col items-center">
-            <FaPhp className="w-16 h-16 text-purple-900 dark:text-[#6C5DD3] mb-2" />
+            <FaPhp className="w-16 h-16 text-[#777BB4] mb-2" />
             <span className='text-gray-600 dark:text-white'>PHP</span>
           </div>
           <div className="flex flex-col items-center">
-            <FaLaravel className="w-16 h-16 text-purple-900 dark:text-[#6C5DD3] mb-2" />
+            <FaLaravel className="w-16 h-16 text-[#FF2D20] mb-2" />
             <span className='text-gray-600 dark:text-white'>Laravel</span>
           </div>
           <div className="flex flex-col items-center">
-            <FaReact className="w-16 h-16 text-purple-900 dark:text-[#6C5DD3] mb-2" />
+            <FaReact className="w-16 h-16 text-[#61DAFB] mb-2" />
             <span className='text-gray-600 dark:text-white'>React</span>
           </div>
           <div className="flex flex-col items-center">
-            <SiNextdotjs className="w-16 h-16 text-purple-900 dark:text-[#6C5DD3] mb-2" />
+            <SiNextdotjs className="w-16 h-16 text-black dark:text-white mb-2" />
             <span className='text-gray-600 dark:text-white'>Next Js</span>
           </div>
           <div className="flex flex-col items-center">
-            <SiTailwindcss className="w-16 h-16 text-purple-900 dark:text-[#6C5DD3] mb-2" />
+            <SiTailwindcss className="w-16 h-16 text-[#06B6D4] mb-2" />
             <span className='text-gray-600 dark:text-white'>Tailwind CSS</span>
           </div>
         </div>
@@ -78,15 +78,15 @@ export default function Home() {
         <div className="mt-8">
           <div className="grid grid-cols-3 gap-6">
             <div className="flex flex-col items-center">
-              <SiZapier className="w-16 h-16 text-purple-900 dark:text-[#6C5DD3] mb-2" />
+              <SiZapier className="w-16 h-16 text-[#FF4A00] mb-2" />
               <span className="text-gray-600 dark:text-white">Zapier</span>
             </div>
             <div className="flex flex-col items-center">
-              <FaRobot className="w-16 h-16 text-purple-900 dark:text-[#6C5DD3] mb-2" />
+              <FaRobot className="w-16 h-16 text-[#10A37F] mb-2" />
               <span className="text-gray-600 dark:text-white">ChatGPT API</span>
             </div>
             <div className="flex flex-col items-center">
-              <SiFacebook className="w-16 h-16 text-purple-900 dark:text-[#6C5DD3] mb-2" />
+              <SiFacebook className="w-16 h-16 text-[#1877F2] mb-2" />
               <span className="text-gray-600 dark:text-white">Facebook API</span>
             </div>
           </div>

@@ -15,7 +15,7 @@ export default function Footer() {
             <FaEnvelope className="w-6 h-6" name='mail' />
           </a>
         </div>
-        <p className="mt-4 text-center dark:text-gray-400 text-gray-600">© 2024 Kevttv. Todos los derechos reservados.</p>
+        <p className="mt-4 text-center dark:text-gray-400 text-gray-600">© 2025 Kevttv. Todos los derechos reservados.</p>
       </footer>
     </div>
 
