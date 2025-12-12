@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { FaHtml5, FaCss3Alt, FaJs, FaPhp, FaLaravel, FaReact, FaRobot } from 'react-icons/fa'
-import { SiZapier, SiFacebook, SiNextdotjs, SiTailwindcss } from 'react-icons/si'
+import { SiZapier, SiFacebook, SiNextdotjs, SiTailwindcss, SiMysql } from 'react-icons/si'
 
 export default function Home() {
   return (
@@ -69,6 +69,10 @@ export default function Home() {
           <div className="flex flex-col items-center">
             <SiTailwindcss className="w-16 h-16 text-[#06B6D4] mb-2" />
             <span className='text-gray-600 dark:text-white'>Tailwind CSS</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <SiMysql className="w-16 h-16 text-[#00618A] mb-2" />
+            <span className='text-gray-600 dark:text-white'>MySQL</span>
           </div>
         </div>
       </section>
