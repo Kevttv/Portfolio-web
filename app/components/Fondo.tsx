@@ -3,59 +3,84 @@
 import { useState, useEffect } from "react"
 import { Sun, Moon } from "lucide-react"
 import type React from "react"
+import { usePathname } from "next/navigation"
+import { getLocaleContent, normalizeLocale } from "@/app/i18n/content"
+
+type Theme = "light" | "dark"
+
+const THEME_KEY = "portfolio-theme"
+
+function resolvePreferredTheme(): Theme {
+  if (typeof window === "undefined") {
+    return "dark"
+  }
+
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
+}
+
+function applyTheme(theme: Theme) {
+  document.documentElement.dataset.theme = theme
+  document.documentElement.classList.toggle("dark", theme === "dark")
+}
 
 export default function BackgroundWrapper({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState("dark")
+  const pathname = usePathname()
+  const locale = normalizeLocale(pathname?.split("/")[1])
+  const content = getLocaleContent(locale)
+
+  const [theme, setTheme] = useState<Theme>("dark")
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") || "dark"
-    setTheme(savedTheme)
-    document.documentElement.classList.toggle("dark", savedTheme === "dark")
+    const savedTheme = localStorage.getItem(THEME_KEY)
+    const nextTheme = savedTheme === "light" || savedTheme === "dark" ? savedTheme : resolvePreferredTheme()
+    setTheme(nextTheme)
+    applyTheme(nextTheme)
+  }, [])
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
+
+    const onChange = (event: MediaQueryListEvent) => {
+      if (!localStorage.getItem(THEME_KEY)) {
+        const nextTheme = event.matches ? "dark" : "light"
+        setTheme(nextTheme)
+        applyTheme(nextTheme)
+      }
+    }
+
+    mediaQuery.addEventListener("change", onChange)
+    return () => {
+      mediaQuery.removeEventListener("change", onChange)
+    }
   }, [])
 
   const toggleTheme = () => {
     const newTheme = theme === "dark" ? "light" : "dark"
     setTheme(newTheme)
-    localStorage.setItem("theme", newTheme)
-    document.documentElement.classList.toggle("dark", newTheme === "dark")
+    localStorage.setItem(THEME_KEY, newTheme)
+    applyTheme(newTheme)
   }
 
   return (
-    <div className={`min-h-screen relative overflow-hidden bg-white dark:bg-gray-900 transition-colors duration-300 ${theme}`}>
-      {/* Fondo con círculos animados */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Círculos grandes */}
-        <div className="absolute top-20 left-20 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-xl opacity-30 dark:opacity-40 animate-blob"></div>
-        <div className="absolute top-40 right-20 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-xl opacity-30 dark:opacity-40 animate-blob animation-delay-2000"></div>
-        <div className="absolute -bottom-20 left-40 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-xl opacity-30 dark:opacity-40 animate-blob animation-delay-4000"></div>
-
-        {/* Círculos medianos */}
-        <div className="absolute top-1/2 left-1/4 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-xl opacity-30 dark:opacity-40 animate-blob animation-delay-3000"></div>
-        <div className="absolute top-1/3 right-1/3 w-64 h-64 bg-pink-500 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-xl opacity-30 dark:opacity-40 animate-blob animation-delay-5000"></div>
-
-        {/* Círculos pequeños */}
-        <div className="absolute top-2/3 right-1/4 w-48 h-48 bg-green-500 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-xl opacity-30 dark:opacity-40 animate-blob animation-delay-1000"></div>
-        <div className="absolute bottom-1/4 right-1/2 w-40 h-40 bg-yellow-500 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-xl opacity-30 dark:opacity-40 animate-blob animation-delay-6000"></div>
+    <div className={`relative min-h-screen overflow-hidden bg-[var(--bg-primary)] text-[var(--text-primary)] transition-colors duration-300 ${theme}`}>
+      <div className="ambient-background" aria-hidden>
+        <div className="ambient-orb orb-a" />
+        <div className="ambient-orb orb-b" />
+        <div className="ambient-orb orb-c" />
+        <div className="ambient-grid" />
       </div>
 
       <button
         onClick={toggleTheme}
-        className="fixed top-4 right-4 p-2 rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-lg transition-all duration-300 hover:scale-110 z-50"
-        aria-label={theme === "dark" ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}
+        className="fixed right-4 top-20 z-50 rounded-full border border-[var(--border-color)] bg-[var(--bg-secondary)]/95 p-2.5 shadow-none transition-transform hover:translate-y-[-1px] md:bg-[var(--bg-secondary)]/85 md:shadow-[var(--shadow-soft)] md:backdrop-blur"
+        aria-label={theme === "dark" ? content.themeToggle.toLight : content.themeToggle.toDark}
       >
-        {theme === "dark" ?
-          <Sun className="text-yellow-400" /> :
-          <Moon className="text-gray-700" />
-        }
+        {theme === "dark" ? <Sun className="h-4 w-4 text-[var(--accent-contrast)]" /> : <Moon className="h-4 w-4 text-[var(--accent-main)]" />}
       </button>
 
-      {/* Contenido */}
-      <div className="relative z-10">
-
-        <main className="container mx-auto px-4 py-8">
-          {children}
-        </main>
+      <div className="relative z-10 flex min-h-screen flex-col">
+        {children}
       </div>
-    </div >
+    </div>
   )
 }
