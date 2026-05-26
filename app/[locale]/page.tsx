@@ -63,6 +63,7 @@ export default async function LocalizedHome({
 
   const content = getLocaleContent(locale)
   const featuredProject = content.projects.featured
+  const upcomingLabel = locale === 'es' ? 'Proximamente' : 'Coming soon'
 
   return (
     <div className="mx-auto w-full max-w-6xl px-4 pb-16 pt-28 sm:px-6 lg:px-8">
@@ -202,92 +203,87 @@ export default async function LocalizedHome({
           </div>
         </article>
 
-        <article className="bento-card animate-rise md:col-span-1 stagger-2">
-          <p className="terminal-line mb-3">$ cat roadmap.md</p>
-          <h2 className="text-xl font-semibold">{content.projects.sideLabel}</h2>
-
-          <div className="mt-4 grid gap-3">
-            {content.projects.sideProjects.map((project) => (
-              <div key={project.name} className="rounded-xl border border-[var(--border-color)] bg-[var(--bg-secondary)] p-4">
-                <div className="mb-2 flex flex-col items-start gap-2 sm:flex-row sm:items-start sm:justify-between">
-                  <h3 className="text-sm font-semibold leading-snug text-[var(--text-primary)]">{project.name}</h3>
-                  <span className="chip chip-muted chip-status">{project.status}</span>
-                </div>
-                <p className="text-sm text-[var(--text-secondary)]">{project.description}</p>
-                {project.link ? (
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent-alt)]"
-                  >
-                    <ArrowUpRight className="h-4 w-4" />
-                    Open
-                  </a>
-                ) : null}
-              </div>
-            ))}
-          </div>
-        </article>
-
-        <article id="projects" className="bento-card animate-rise md:col-span-2 stagger-3">
+        <article id="projects" className="bento-card animate-rise md:col-span-1 stagger-3">
           <p className="terminal-line mb-3">{content.projects.command}</p>
           <div className="mb-3 flex items-center justify-between gap-2">
             <h2 className="text-xl font-semibold">{content.projects.title}</h2>
             <span className="chip">{content.projects.featuredLabel}</span>
           </div>
 
-          <div className="overflow-hidden rounded-2xl border border-[var(--border-color)] bg-[var(--bg-secondary)]">
-            <Image
-              src={featuredProject.image}
-              alt={featuredProject.name}
-              width={1280}
-              height={800}
-              sizes="(min-width: 1280px) 800px, (min-width: 768px) 66vw, 100vw"
-              className="h-auto w-full object-cover"
-            />
+          <div className="grid gap-3">
+            <div className="overflow-hidden rounded-2xl border border-[var(--border-color)] bg-[var(--bg-secondary)]">
+              <Image
+                src={featuredProject.image}
+                alt={featuredProject.name}
+                width={1280}
+                height={800}
+                sizes="(min-width: 1280px) 620px, (min-width: 768px) 50vw, 100vw"
+                className="h-auto w-full object-cover"
+              />
 
-            <div className="space-y-4 p-4 sm:p-5">
-              <div className="flex items-start justify-between gap-3">
-                <h3 className="text-lg font-semibold">{featuredProject.name}</h3>
-                <div className="flex items-center gap-2">
-                  {featuredProject.github ? (
-                    <a
-                      href={featuredProject.github}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="icon-button"
-                      aria-label="GitHub"
-                    >
-                      <Layers3 className="h-4 w-4" />
-                    </a>
-                  ) : null}
-                  {featuredProject.link ? (
-                    <a
-                      href={featuredProject.link}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="icon-button"
-                      aria-label="Open project"
-                    >
-                      <ArrowUpRight className="h-4 w-4" />
-                    </a>
-                  ) : null}
+              <div className="space-y-4 p-4">
+                <div className="flex items-start justify-between gap-3">
+                  <h3 className="text-base font-semibold sm:text-lg">{featuredProject.name}</h3>
+                  <div className="flex items-center gap-2">
+                    {featuredProject.github ? (
+                      <a
+                        href={featuredProject.github}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="icon-button"
+                        aria-label="GitHub"
+                      >
+                        <Layers3 className="h-4 w-4" />
+                      </a>
+                    ) : null}
+                    {featuredProject.link ? (
+                      <a
+                        href={featuredProject.link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="icon-button"
+                        aria-label="Open project"
+                      >
+                        <ArrowUpRight className="h-4 w-4" />
+                      </a>
+                    ) : null}
+                  </div>
                 </div>
-              </div>
-              <p className="text-sm text-[var(--text-secondary)] sm:text-base">{featuredProject.description}</p>
 
-              <div className="flex flex-wrap gap-2">
-                {featuredProject.tech.map((tech) => (
-                  <span key={tech} className="chip chip-muted">
-                    {tech}
-                  </span>
+                <p className="text-sm text-[var(--text-secondary)]">{featuredProject.description}</p>
+
+                <div className="flex flex-wrap gap-2">
+                  {featuredProject.tech.map((tech) => (
+                    <span key={tech} className="chip chip-muted">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                <p className="rounded-xl border border-[var(--border-color)] bg-[var(--bg-primary)]/40 px-3 py-2 text-sm text-[var(--text-muted)]">
+                  {featuredProject.result}
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-[var(--text-muted)]">
+                {content.projects.sideLabel}
+              </p>
+              <div className="grid gap-3">
+                {content.projects.sideProjects.map((project) => (
+                  <div
+                    key={project.name}
+                    className="rounded-xl border border-dashed border-[var(--border-color)] bg-[var(--bg-secondary)]/65 p-4"
+                  >
+                    <div className="mb-2 flex flex-col items-start gap-2 sm:flex-row sm:items-start sm:justify-between">
+                      <h3 className="text-sm font-semibold leading-snug text-[var(--text-primary)]">{project.name}</h3>
+                      <span className="chip chip-muted chip-status">{upcomingLabel}</span>
+                    </div>
+                    <p className="text-sm text-[var(--text-secondary)]">{project.description}</p>
+                  </div>
                 ))}
               </div>
-
-              <p className="rounded-xl border border-[var(--border-color)] bg-[var(--bg-primary)]/40 px-3 py-2 text-sm text-[var(--text-muted)]">
-                {featuredProject.result}
-              </p>
             </div>
           </div>
         </article>
