@@ -127,10 +127,10 @@ const dictionary: Record<Locale, PortfolioDictionary> = {
       command: '$ whoami',
       name: 'Kevin Virgen Tapasco',
       role: 'Full Stack Developer',
-      age: '19 anos',
+      age: '19 años',
       bio:
-        'Tecnologo en Analisis y Desarrollo de Software. Me enfoco en construir productos web rapidos, mantener codigo limpio y conectar servicios de IA para resolver problemas reales.',
-      badges: ['Disponible para trabajar', 'Abierto a retos', 'Remoto o hibrido'],
+        'Tecnólogo en Análisis y Desarrollo de Software. Me enfoco en construir productos web rápidos, mantener código limpio y conectar servicios de IA para resolver problemas reales.',
+      badges: ['Disponible para trabajar', 'Abierto a retos', 'Remoto o híbrido'],
       location: 'Colombia - GMT-5',
     },
     now: {
@@ -153,8 +153,8 @@ const dictionary: Record<Locale, PortfolioDictionary> = {
           helper: 'Diseño flujos simples para tareas reales, cuidando legibilidad y consistencia.',
         },
         {
-          label: 'Automatizacion con criterio',
-          helper: 'Integro IA y automatizaciones cuando reducen friccion y mantienen control operativo.',
+          label: 'Automatización con criterio',
+          helper: 'Integro IA y automatizaciones cuando reducen fricción y mantienen control operativo.',
         },
       ],
     },
@@ -171,7 +171,7 @@ const dictionary: Record<Locale, PortfolioDictionary> = {
         {
           key: 'backend',
           title: 'Backend',
-          focus: 'Base para APIs, modulos de negocio y paneles administrativos.',
+          focus: 'Base para APIs, módulos de negocio y paneles administrativos.',
           items: ['PHP', 'Laravel', 'MySQL', 'REST APIs'],
         },
         {
@@ -183,7 +183,7 @@ const dictionary: Record<Locale, PortfolioDictionary> = {
         {
           key: 'tooling',
           title: 'Tooling',
-          focus: 'Flujo diario para desarrollo, despliegue y gestion basica de hosting.',
+          focus: 'Flujo diario para desarrollo, despliegue y gestión básica de hosting.',
           items: ['Git / GitHub', 'Postman', 'Vercel', 'cPanel (cron jobs)'],
         },
       ],
@@ -195,8 +195,8 @@ const dictionary: Record<Locale, PortfolioDictionary> = {
       featured: {
         name: 'Simply Export App',
         description:
-          'Aplicacion web para exportacion de datos de forma rapida y ordenada, enfocada en UX clara y procesos eficientes.',
-        result: 'Flujo de exportacion mas simple para operaciones diarias.',
+          'Aplicación web para exportación de datos de forma rápida y ordenada, enfocada en UX clara y procesos eficientes.',
+        result: 'Flujo de exportación más simple para operaciones diarias.',
         tech: ['HTML', 'CSS', 'JavaScript'],
         image: '/simply-export-app.png',
         link: 'https://simply-export-app.vercel.app/',
@@ -205,7 +205,7 @@ const dictionary: Record<Locale, PortfolioDictionary> = {
       sideProjects: [
         {
           name: 'Plataforma educativa',
-          description: 'Plataforma para cursos y recursos con enfoque practico y experiencia clara para estudiantes.',
+          description: 'Plataforma para cursos y recursos con enfoque práctico y experiencia clara para estudiantes.',
           status: 'Planeando',
         },
         {
@@ -215,7 +215,7 @@ const dictionary: Record<Locale, PortfolioDictionary> = {
         },
         {
           name: 'Mis juegos y progreso',
-          description: 'Tracking de partidas y pagina para mostrar logros de Steam y otras plataformas.',
+          description: 'Tracking de partidas y página para mostrar logros de Steam y otras plataformas.',
           status: 'Planeando',
         },
       ],
@@ -226,8 +226,8 @@ const dictionary: Record<Locale, PortfolioDictionary> = {
       viewLabel: 'Ver certificado',
       items: [
         {
-          name: 'Tecnologo en Analisis y Desarrollo de Software',
-          issuer: 'Institucion Educativa',
+          name: 'Tecnólogo en Análisis y Desarrollo de Software',
+          issuer: 'Institución Educativa',
           image: '/certificado.png',
           link: 'https://drive.google.com/file/d/1ktGK2LzZKIluTG8J9LzySY5w63z_ikbQ/view?usp=drive_link',
         },
@@ -241,13 +241,13 @@ const dictionary: Record<Locale, PortfolioDictionary> = {
     },
     contact: {
       command: '$ echo $CONTACT',
-      title: 'Construyamos algo que si deje huella',
-      description: 'Estoy disponible para oportunidades donde pueda aportar en producto, UI y automatizacion.',
+      title: 'Construyamos algo que sí deje huella',
+      description: 'Estoy disponible para oportunidades donde pueda aportar en producto, UI y automatización.',
       cta: 'Enviar correo',
     },
     footer: {
       command: '$ status --portfolio',
-      slogan: 'Codigo con criterio, interfaces con intencion.',
+      slogan: 'Código con criterio, interfaces con intención.',
       copyright: 'Kevttv',
     },
     themeToggle: {
