@@ -127,7 +127,7 @@ const dictionary: Record<Locale, PortfolioDictionary> = {
       command: '$ whoami',
       name: 'Kevin Virgen Tapasco',
       role: 'Full Stack Developer',
-      age: '19 años',
+      age: '21 años',
       bio:
         'Tecnólogo en Análisis y Desarrollo de Software. Me enfoco en construir productos web rápidos, mantener código limpio y conectar servicios de IA para resolver problemas reales.',
       badges: ['Disponible para trabajar', 'Abierto a retos', 'Remoto o híbrido'],
